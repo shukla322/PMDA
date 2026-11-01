@@ -1,4 +1,4 @@
-# PMDA (B.Tech Deliverable)
+# PMDA
 
 Pharmaceutical Molecular Design Agent (PMDA) is a governed multi-agent framework for target-specific molecular candidate generation and computational evaluation.
 
