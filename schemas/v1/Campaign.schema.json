@@ -1,0 +1,185 @@
+{
+  "$defs": {
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "max_jobs": {
+          "default": 3,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Max Jobs",
+          "type": "integer"
+        },
+        "max_seconds_per_job": {
+          "default": 600,
+          "maximum": 3600,
+          "minimum": 1,
+          "title": "Max Seconds Per Job",
+          "type": "integer"
+        },
+        "max_candidates": {
+          "default": 100,
+          "maximum": 10000,
+          "minimum": 1,
+          "title": "Max Candidates",
+          "type": "integer"
+        }
+      },
+      "title": "Budget",
+      "type": "object"
+    },
+    "Objective": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
+        },
+        "mode": {
+          "enum": [
+            "infrastructure",
+            "research"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "budget": {
+          "$ref": "#/$defs/Budget"
+        }
+      },
+      "required": [
+        "identifier",
+        "description",
+        "mode"
+      ],
+      "title": "Objective",
+      "type": "object"
+    },
+    "State": {
+      "enum": [
+        "DRAFT",
+        "PLANNING",
+        "AWAITING_PLAN_APPROVAL",
+        "FORMULATING",
+        "AWAITING_SCORE_APPROVAL",
+        "CONFIGURING",
+        "AWAITING_LAUNCH_APPROVAL",
+        "QUEUED",
+        "RUNNING",
+        "EVALUATING",
+        "ANALYSING",
+        "AWAITING_REVISION_APPROVAL",
+        "COMPLETED",
+        "FAILED",
+        "CANCELLED"
+      ],
+      "title": "State",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 1,
+      "title": "Description",
+      "type": "string"
+    },
+    "objective": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Objective"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "state": {
+      "$ref": "#/$defs/State"
+    },
+    "revision": {
+      "minimum": 0,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "iteration": {
+      "minimum": 0,
+      "title": "Iteration",
+      "type": "integer"
+    },
+    "owner": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Owner"
+    },
+    "budget": {
+      "$ref": "#/$defs/Budget"
+    },
+    "archived": {
+      "title": "Archived",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "description",
+    "state",
+    "revision",
+    "iteration",
+    "budget",
+    "archived"
+  ],
+  "title": "Campaign",
+  "type": "object"
+}

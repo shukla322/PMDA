@@ -1,0 +1,88 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "campaign": {
+      "minLength": 1,
+      "title": "Campaign",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "plan",
+        "score",
+        "launch",
+        "revision"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "artifact_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Artifact Sha256",
+      "type": "string"
+    },
+    "actor": {
+      "minLength": 1,
+      "title": "Actor",
+      "type": "string"
+    },
+    "acting_role": {
+      "enum": [
+        "scientist",
+        "operator"
+      ],
+      "title": "Acting Role",
+      "type": "string"
+    },
+    "requested_at": {
+      "minLength": 1,
+      "title": "Requested At",
+      "type": "string"
+    },
+    "decided_at": {
+      "minLength": 1,
+      "title": "Decided At",
+      "type": "string"
+    },
+    "decision": {
+      "const": "approved",
+      "default": "approved",
+      "title": "Decision",
+      "type": "string"
+    },
+    "comments": {
+      "default": "",
+      "title": "Comments",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 0,
+      "title": "Revision",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "id",
+    "campaign",
+    "kind",
+    "artifact_sha256",
+    "actor",
+    "acting_role",
+    "requested_at",
+    "decided_at",
+    "revision"
+  ],
+  "title": "Approval",
+  "type": "object"
+}

@@ -1,0 +1,85 @@
+{
+  "identifier": "conservative_activity_v1",
+  "source": "src\\pmda\\reward.py",
+  "source_sha256": "e8e7402061b8290cb02a670b78d746d01b379e616c8c93c4c95b60df247ad658",
+  "scope": "Research-only EGFR reward with uncertainty/domain/property gates",
+  "executable_generation_allowed": false,
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "component": {
+        "const": "conservative_activity_v1",
+        "default": "conservative_activity_v1",
+        "title": "Component",
+        "type": "string"
+      },
+      "model_sha256": {
+        "pattern": "^[0-9a-f]{64}$",
+        "title": "Model Sha256",
+        "type": "string"
+      },
+      "target": {
+        "const": "EGFR-human-wt-v1",
+        "default": "EGFR-human-wt-v1",
+        "title": "Target",
+        "type": "string"
+      },
+      "required_smarts": {
+        "minLength": 1,
+        "title": "Required Smarts",
+        "type": "string"
+      },
+      "mw_max": {
+        "default": 500,
+        "maximum": 600,
+        "minimum": 100,
+        "title": "Mw Max",
+        "type": "number"
+      },
+      "max_logp": {
+        "default": 5,
+        "maximum": 6,
+        "minimum": 0,
+        "title": "Max Logp",
+        "type": "number"
+      },
+      "max_uncertainty": {
+        "default": 1.5,
+        "exclusiveMinimum": 0,
+        "maximum": 1.5,
+        "title": "Max Uncertainty",
+        "type": "number"
+      },
+      "lower_bound_floor": {
+        "const": 5.0,
+        "default": 5.0,
+        "title": "Lower Bound Floor",
+        "type": "number"
+      },
+      "lower_bound_ceiling": {
+        "const": 8.0,
+        "default": 8.0,
+        "title": "Lower Bound Ceiling",
+        "type": "number"
+      },
+      "reject_alerts": {
+        "const": true,
+        "default": true,
+        "title": "Reject Alerts",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "model_sha256",
+      "required_smarts"
+    ],
+    "title": "RewardRecipe",
+    "type": "object"
+  }
+}

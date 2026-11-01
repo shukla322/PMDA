@@ -1,0 +1,27 @@
+[
+  {
+    "file": "references/chemrxiv.15005834_v1 (1).pdf",
+    "bytes": 8728454,
+    "sha256": "157290dc3e8afa39943fdf120067b1876319ddc99f3cdc972f2d05d177eb70cd"
+  },
+  {
+    "file": "references/PHARMA_MOLECULAR_DESIGN_AGENT_PROJECT_PLAN.md",
+    "bytes": 38530,
+    "sha256": "7f17f99e6f2b07dd6f30ff3958dd3cd74b4d94a75f3617d7dadfcdbf57550735"
+  },
+  {
+    "file": "references/sources.json",
+    "bytes": 428,
+    "sha256": "261c0be52e65185700305d230cfcb919f8ac98b3c7fc036552e70859c7fc7029"
+  },
+  {
+    "file": "references/U PHARMA_MOLECULAR_DESIGN_AGENT_PROJECT_PLAN (2).md",
+    "bytes": 39446,
+    "sha256": "713c6509638895f845536821585040cce8f275390e3d55e453f64486e163a9e2"
+  },
+  {
+    "file": "references/windows-sampling.patch",
+    "bytes": 1956,
+    "sha256": "33d829ea15c5f26ab12707dd114abc8520867cc25835a6b988571a25b6c5902c"
+  }
+]

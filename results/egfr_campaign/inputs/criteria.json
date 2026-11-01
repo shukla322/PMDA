@@ -1,0 +1,9 @@
+{
+  "minimum_portfolio_size": 3,
+  "minimum_predicted_lower_pic50": 6,
+  "maximum_pairwise_tanimoto": 0.85,
+  "novelty_reference": "training partition only",
+  "max_adaptive_iterations": 2,
+  "max_candidates": 112,
+  "claim": "Computational prioritization; no demonstrated potency, selectivity, safety or synthesis feasibility"
+}

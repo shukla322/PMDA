@@ -1,0 +1,25 @@
+{
+  "policy": "egfr-explicit-wt-exact-binding-v1",
+  "raw_records": 18381,
+  "curated_molecules": 777,
+  "scaffolds": 354,
+  "exclusions": {
+    "target_assignment": 4539,
+    "non_single_protein_binding_format": 5723,
+    "wildtype_not_explicit": 4082,
+    "duplicate_flag": 120,
+    "variant_or_cell_description": 1460,
+    "explicit_variant": 1615,
+    "mixture_or_salt": 4,
+    "validity_flag": 4,
+    "replicate_conflict_molecules": 9
+  },
+  "source_manifest_sha256": "e51726ccadc7d5b156a5e26c4c225ce3b9d3e7d1fdc929fab9f1045dc2a69fa9",
+  "curated_sha256": "15b55416ce796a99108681d089f9abc73e4f24376eb85f28bae0f70a71aa2dce",
+  "limitations": [
+    "Wild-type assignment based on explicit assay descriptions, not manual review of every publication",
+    "IC50 depends on assay conditions; target confidence does not eliminate assay heterogeneity",
+    "Cross-assay medians are a pragmatic research aggregation, not new experimental measurements",
+    "No claim of non-covalent mechanism from activity records alone"
+  ]
+}

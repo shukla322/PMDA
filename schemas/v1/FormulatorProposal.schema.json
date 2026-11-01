@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "component": {
+      "const": "conservative_activity_v1",
+      "title": "Component",
+      "type": "string"
+    },
+    "predictor": {
+      "minLength": 1,
+      "title": "Predictor",
+      "type": "string"
+    },
+    "rationale": {
+      "const": "Use the registered research predictor with the reviewed uncertainty, domain and property gates; no clinical claim.",
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "component",
+    "predictor",
+    "rationale"
+  ],
+  "title": "FormulatorProposal",
+  "type": "object"
+}

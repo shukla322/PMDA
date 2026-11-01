@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "complete",
+        "revise",
+        "stop"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "diagnosis": {
+      "enum": [
+        "criteria_met",
+        "insufficient_candidates",
+        "model_unqualified",
+        "execution_failed",
+        "budget_exhausted"
+      ],
+      "title": "Diagnosis",
+      "type": "string"
+    },
+    "rationale": {
+      "enum": [
+        "Frozen computational portfolio criteria are met; experimental validation is still required.",
+        "Portfolio criteria are unmet; one bounded approved revision may be proposed.",
+        "The predictor is unqualified; activity optimization must stop.",
+        "Execution failed; inspect recorded engine evidence before any new proposal.",
+        "The approved iteration budget is exhausted; stop without a success claim."
+      ],
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "diagnosis",
+    "rationale"
+  ],
+  "title": "AnalyserProposal",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "role": "planner",
+  "version": "1.0",
+  "rule": "The controller has already checked completeness. An empty missing_information list [] means nothing is missing: action MUST be propose. A nonempty list means action MUST be request_information. Copy target, predictor and missing_information exactly. Do not infer additional missing fields. Never invent identifiers.",
+  "context_fields": [
+    "objective",
+    "target",
+    "predictor",
+    "missing_information"
+  ],
+  "tools": [],
+  "max_attempts": 2,
+  "max_output_tokens": 384,
+  "authority": "Advisory only; no controller, approvals or subprocess access"
+}

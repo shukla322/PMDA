@@ -1,0 +1,88 @@
+{
+  "$defs": {
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "max_jobs": {
+          "default": 3,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Max Jobs",
+          "type": "integer"
+        },
+        "max_seconds_per_job": {
+          "default": 600,
+          "maximum": 3600,
+          "minimum": 1,
+          "title": "Max Seconds Per Job",
+          "type": "integer"
+        },
+        "max_candidates": {
+          "default": 100,
+          "maximum": 10000,
+          "minimum": 1,
+          "title": "Max Candidates",
+          "type": "integer"
+        }
+      },
+      "title": "Budget",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identifier": {
+      "minLength": 1,
+      "title": "Identifier",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 1,
+      "title": "Description",
+      "type": "string"
+    },
+    "target": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target"
+    },
+    "mode": {
+      "enum": [
+        "infrastructure",
+        "research"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "budget": {
+      "$ref": "#/$defs/Budget"
+    }
+  },
+  "required": [
+    "identifier",
+    "description",
+    "mode"
+  ],
+  "title": "Objective",
+  "type": "object"
+}

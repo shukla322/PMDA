@@ -1,0 +1,112 @@
+[
+  {
+    "seed": 42,
+    "arm": "prior",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 0,
+    "generated_rows": 48,
+    "campaign": "6f5c6da1-a459-4df3-bf00-b233c61cb337",
+    "final_mean_reward": 0.0,
+    "wall_seconds": 30.062999999994645
+  },
+  {
+    "seed": 42,
+    "arm": "mol2mol",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 0,
+    "generated_rows": 48,
+    "campaign": "f8ed39be-6edf-496e-b0e9-f479b8fd68ed",
+    "final_mean_reward": 0.022922906732537305,
+    "wall_seconds": 45.5
+  },
+  {
+    "seed": 42,
+    "arm": "no_feedback",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 0,
+    "generated_rows": 48,
+    "campaign": "b304cd04-01f7-4a13-b338-b88b6b60da72",
+    "final_mean_reward": 0.022922906732537305,
+    "wall_seconds": 63.280999999988126
+  },
+  {
+    "seed": 42,
+    "arm": "fixed",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 2,
+    "generated_rows": 48,
+    "campaign": "b851ba98-0646-4676-93c8-ad1eb6421fd2",
+    "final_mean_reward": 0.08741968610406556,
+    "wall_seconds": 129.07800000000861
+  },
+  {
+    "seed": 42,
+    "arm": "full",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 2,
+    "generated_rows": 48,
+    "campaign": "3733bb30-3095-4308-8bdd-28baadec69c0",
+    "final_mean_reward": 0.08741968610406556,
+    "wall_seconds": 270.9219999999914
+  },
+  {
+    "seed": 99,
+    "arm": "prior",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 0,
+    "generated_rows": 48,
+    "campaign": "b87e95d0-4961-41e2-8a52-9ab3a793250d",
+    "final_mean_reward": 0.0,
+    "wall_seconds": 34.01600000000326
+  },
+  {
+    "seed": 99,
+    "arm": "mol2mol",
+    "status": "executed",
+    "criteria_met": true,
+    "portfolio_size": 3,
+    "generated_rows": 48,
+    "campaign": "dd417c25-0db1-400a-a46f-7de15def5243",
+    "final_mean_reward": 0.05158511526727294,
+    "wall_seconds": 75.98399999999674
+  },
+  {
+    "seed": 99,
+    "arm": "no_feedback",
+    "status": "executed",
+    "criteria_met": true,
+    "portfolio_size": 3,
+    "generated_rows": 48,
+    "campaign": "1fd5378b-a319-4e77-95c4-72472aeacb9a",
+    "final_mean_reward": 0.05158511526727294,
+    "wall_seconds": 97.5
+  },
+  {
+    "seed": 99,
+    "arm": "fixed",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 0,
+    "generated_rows": 48,
+    "campaign": "d2d455bf-43c2-4c06-93fa-87adb3a820e8",
+    "final_mean_reward": 0.36275590567123256,
+    "wall_seconds": 137.10899999999674
+  },
+  {
+    "seed": 99,
+    "arm": "full",
+    "status": "executed",
+    "criteria_met": false,
+    "portfolio_size": 0,
+    "generated_rows": 48,
+    "campaign": "9faa079b-d766-484c-85d7-20fc58693acb",
+    "final_mean_reward": 0.36275590567123256,
+    "wall_seconds": 244.0
+  }
+]

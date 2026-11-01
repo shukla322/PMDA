@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identifier": {
+      "minLength": 1,
+      "title": "Identifier",
+      "type": "string"
+    },
+    "species": {
+      "minLength": 1,
+      "title": "Species",
+      "type": "string"
+    },
+    "construct_description": {
+      "minLength": 1,
+      "title": "Construct Description",
+      "type": "string"
+    },
+    "mechanism": {
+      "minLength": 1,
+      "title": "Mechanism",
+      "type": "string"
+    },
+    "endpoint": {
+      "const": "pIC50",
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "identifier",
+    "species",
+    "construct_description",
+    "mechanism",
+    "endpoint",
+    "limitations"
+  ],
+  "title": "Target",
+  "type": "object"
+}

@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "scope": "Real HTTP API journey with local agents and REINVENT; not a browser automation claim",
+  "campaign": "512047a0-fc30-488f-8901-6190faf438bf",
+  "state": "FAILED",
+  "evaluated_rows": 4,
+  "steps": [
+    {
+      "state": "DRAFT",
+      "time": "2026-10-29T04:28:22.643315+00:00"
+    },
+    {
+      "state": "PLANNING",
+      "time": "2026-10-29T04:28:24.658474+00:00"
+    },
+    {
+      "state": "AWAITING_PLAN_APPROVAL",
+      "time": "2026-10-29T04:28:40.776686+00:00"
+    },
+    {
+      "state": "FORMULATING",
+      "time": "2026-10-29T04:28:42.835420+00:00"
+    },
+    {
+      "state": "AWAITING_SCORE_APPROVAL",
+      "time": "2026-10-29T04:28:56.962863+00:00"
+    },
+    {
+      "state": "CONFIGURING",
+      "time": "2026-10-29T04:28:59.106998+00:00"
+    },
+    {
+      "state": "AWAITING_LAUNCH_APPROVAL",
+      "time": "2026-10-29T04:29:21.820283+00:00"
+    },
+    {
+      "state": "QUEUED",
+      "time": "2026-10-29T04:29:24.138492+00:00"
+    },
+    {
+      "state": "RUNNING",
+      "time": "2026-10-29T04:29:26.339423+00:00"
+    },
+    {
+      "state": "EVALUATING",
+      "time": "2026-10-29T04:29:54.597146+00:00"
+    },
+    {
+      "state": "FAILED",
+      "time": "2026-10-29T04:30:16.786064+00:00"
+    }
+  ]
+}

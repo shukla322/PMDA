@@ -1,0 +1,115 @@
+{
+  "$defs": {
+    "Artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size": {
+          "minimum": 0,
+          "title": "Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "size"
+      ],
+      "title": "Artifact",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identifier": {
+      "minLength": 1,
+      "title": "Identifier",
+      "type": "string"
+    },
+    "target": {
+      "minLength": 1,
+      "title": "Target",
+      "type": "string"
+    },
+    "dataset_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Dataset Sha256",
+      "type": "string"
+    },
+    "artifact": {
+      "$ref": "#/$defs/Artifact"
+    },
+    "report": {
+      "$ref": "#/$defs/Artifact"
+    },
+    "endpoint": {
+      "const": "pIC50",
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "intended_use": {
+      "minLength": 1,
+      "title": "Intended Use",
+      "type": "string"
+    },
+    "domain_method": {
+      "minLength": 1,
+      "title": "Domain Method",
+      "type": "string"
+    },
+    "uncertainty_method": {
+      "minLength": 1,
+      "title": "Uncertainty Method",
+      "type": "string"
+    },
+    "eligible_for_optimization": {
+      "title": "Eligible For Optimization",
+      "type": "boolean"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "identifier",
+    "target",
+    "dataset_sha256",
+    "artifact",
+    "report",
+    "endpoint",
+    "intended_use",
+    "domain_method",
+    "uncertainty_method",
+    "eligible_for_optimization",
+    "limitations"
+  ],
+  "title": "Predictor",
+  "type": "object"
+}

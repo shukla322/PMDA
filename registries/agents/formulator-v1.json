@@ -1,0 +1,14 @@
+{
+  "role": "formulator",
+  "version": "1.0",
+  "rule": "Propose only the supplied registered conservative_activity_v1 component and predictor. No code or transforms.",
+  "context_fields": [
+    "predictor",
+    "component",
+    "qualification"
+  ],
+  "tools": [],
+  "max_attempts": 2,
+  "max_output_tokens": 384,
+  "authority": "Advisory only; no controller, approvals or subprocess access"
+}

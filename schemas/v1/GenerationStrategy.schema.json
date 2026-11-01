@@ -1,0 +1,50 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "run_type": {
+      "enum": [
+        "sampling",
+        "transfer_learning",
+        "staged_learning"
+      ],
+      "title": "Run Type",
+      "type": "string"
+    },
+    "device": {
+      "const": "cpu",
+      "default": "cpu",
+      "title": "Device",
+      "type": "string"
+    },
+    "model_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Model Sha256",
+      "type": "string"
+    },
+    "seed": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": 42,
+      "title": "Seed"
+    }
+  },
+  "required": [
+    "run_type",
+    "model_sha256"
+  ],
+  "title": "GenerationStrategy",
+  "type": "object"
+}

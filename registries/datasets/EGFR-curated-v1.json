@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "identifier": "EGFR-curated-v1",
+  "target": "EGFR-human-wt-v1",
+  "artifact": {
+    "schema_version": "1.0",
+    "path": "data\\curated\\egfr-20261027T135452Z\\curated.json",
+    "sha256": "15b55416ce796a99108681d089f9abc73e4f24376eb85f28bae0f70a71aa2dce",
+    "size": 307151
+  },
+  "source_manifest_sha256": "e51726ccadc7d5b156a5e26c4c225ce3b9d3e7d1fdc929fab9f1045dc2a69fa9",
+  "curation_version": "egfr-explicit-wt-exact-binding-v1",
+  "endpoint": "pIC50",
+  "split_policy": "fixed hash-ranked scaffold groups, 65/15/20 percent of scaffold groups; row proportions may differ",
+  "license_note": "Derived ChEMBL data: retain attribution and applicable source license; see TARGET_SELECTION.md"
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A governed, local molecular design research workspace.">
+  <title>PMDA | Molecular Design Workspace</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/presentation.css">
+  <script src="/static/app.js" defer></script>
+  <script src="/static/presentation.js" defer></script>
+</head>
+<body>
+<section id="login" class="login-shell">
+  <div class="login-intro"><span class="wordmark">PMDA <span>MOLECULAR DESIGN</span></span><h1>From molecular ideas<br>to traceable evidence.</h1><p>A local workspace for governed molecular design. Review every decision and inspect every result.</p><div class="intro-note">Solitarius-inspired orchestration · EGFR research benchmark</div></div>
+  <form id="login-form" class="login-card"><div class="eyebrow">LOCAL RESEARCH PROTOTYPE</div><h2>Open the workspace</h2><p>Use the credentials in <code>runtime/portal/LOCAL_ACCESS.txt</code>.</p><label>Username<input id="username" name="username" autocomplete="username" required></label><label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label><button class="primary">Sign in</button><p id="login-error" role="alert"></p><small>Local CPU · No paid API · Research use only</small></form>
+</section>
+<div id="workspace" hidden>
+  <aside><a class="wordmark" href="/">PMDA <span>MOLECULAR DESIGN</span></a><div class="aside-label">ACTIVE PROJECT</div><label class="sr-only" for="project">Project</label><select id="project"></select><nav aria-label="Workspace"><button data-view="campaigns" class="nav active">Experiments</button><button data-view="registries" class="nav">Evidence library</button><button data-view="admin" class="nav">System</button></nav><div class="aside-bottom"><span class="dot"></span> Running locally<p>CPU workspace · no paid APIs</p><button id="logout" class="quiet">Sign out</button></div></aside>
+  <main>
+    <header><span id="breadcrumb">WORKSPACE / OVERVIEW</span><span id="identity"></span></header><div id="message" role="status" aria-live="polite" hidden></div>
+    <section id="campaigns-view"><div class="heading"><div><div class="eyebrow">EXPERIMENTS</div><h1>Your molecular design runs</h1><p>Open a completed example or create a small, controlled test.</p></div><button id="new" class="primary">New experiment</button></div><div class="notice">Research prototype: predictions rank candidates for review; they do not establish efficacy, safety, selectivity or synthesis feasibility.</div><div id="campaign-list" class="campaign-grid"></div></section>
+    <section id="detail-view" hidden><button id="back" class="quiet">← All experiments</button><div class="heading"><div><div class="eyebrow" id="campaign-id"></div><h1 id="campaign-title"></h1><p id="campaign-state"></p></div><button id="refresh" class="secondary">Check for updates</button></div><div id="metrics" class="metrics"></div><div id="operations"></div><div class="tabs" role="tablist" aria-label="Experiment areas"><button data-tab="overview" role="tab" class="active">Progress</button><button data-tab="candidates" role="tab">Candidate table</button><button data-tab="space" role="tab">Chemical space</button><button data-tab="logs" role="tab">Engine log</button><button data-tab="audit" role="tab">Audit trail</button><button data-tab="exports" role="tab">Files</button></div><div id="tab-content"></div></section>
+    <section id="registries-view" hidden><div class="heading"><div><div class="eyebrow">EVIDENCE LIBRARY</div><h1>Registered scientific inputs</h1><p>The target, dataset, predictor and components used by this prototype.</p></div></div><div id="registry-list"></div></section>
+    <section id="admin-view" hidden><div class="heading"><div><div class="eyebrow">SYSTEM</div><h1>Local service and access</h1><p>Health, background work and local user roles.</p></div></div><div id="health"></div><form id="user-form" class="panel" hidden><h2>Add workspace member</h2><div class="form-grid"><label>Username<input name="username" required pattern="[A-Za-z0-9_-]{3,50}"></label><label>Temporary password<input name="password" type="password" required minlength="12" autocomplete="new-password"></label><label>Role<select name="role"><option>viewer</option><option>scientist</option><option>operator</option><option>admin</option></select></label></div><p>Scientists approve plans and scores; operators approve launches and run jobs.</p><button class="secondary">Create member</button></form></section>
+  </main>
+</div>
+<dialog id="new-dialog"><form id="new-form"><div class="eyebrow">NEW EGFR EXPERIMENT</div><h2>Run a small molecular test</h2><p>The default four-candidate run is the quickest way to test the complete workflow on this computer.</p><label>What should the system prioritize?<textarea name="objective" required minlength="10" maxlength="1000">Prioritize EGFR wild-type analogues with uncertainty-qualified activity and the fixed quinazoline motif.</textarea></label><details class="advanced-form"><summary>Advanced settings</summary><label>Lead molecule (SMILES)<textarea name="lead" id="lead" required></textarea></label><div class="form-grid"><label>Number of candidates<input type="number" name="candidates" min="4" max="112" value="4" required></label><label>Reproducibility seed<input type="number" name="seed" min="0" value="42" required></label></div></details><div class="test-expectation"><strong>What happens next</strong><span>Review plan → review scoring → approve run → inspect molecules</span></div><div class="actions"><button type="button" id="close-new" class="quiet">Cancel</button><button class="primary">Create test</button></div></form></dialog>
+<dialog id="molecule-dialog"><button id="close-molecule" class="quiet">Close</button><h2>Candidate structure</h2><img id="molecule-img" alt="Two-dimensional depiction of the selected candidate"><pre id="molecule-evidence"></pre></dialog>
+</body>
+</html>

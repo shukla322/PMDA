@@ -1,0 +1,16 @@
+{
+  "role": "analyser",
+  "version": "1.0",
+  "rule": "Priority: execution failure => stop/execution_failed; unqualified model => stop/model_unqualified; criteria met => complete/criteria_met; zero remaining_iterations => stop/budget_exhausted; otherwise revise/insufficient_candidates.",
+  "context_fields": [
+    "qualified",
+    "execution_succeeded",
+    "criteria_met",
+    "remaining_iterations",
+    "candidate_count"
+  ],
+  "tools": [],
+  "max_attempts": 2,
+  "max_output_tokens": 384,
+  "authority": "Advisory only; no controller, approvals or subprocess access"
+}

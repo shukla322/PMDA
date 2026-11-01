@@ -1,0 +1,25 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Runtime/generated artifacts
+runtime/
+tmp/
+*.log
+*.sqlite3
+*.db
+*.chkpt
+
+# Large local-only model/vendor folders (not included in this publish repo)
+models/
+vendor/
+
+# Editor/system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

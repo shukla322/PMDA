@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "identifier": "EGFR-rf-v1",
+  "target": "EGFR-human-wt-v1",
+  "dataset_sha256": "15b55416ce796a99108681d089f9abc73e4f24376eb85f28bae0f70a71aa2dce",
+  "artifact": {
+    "schema_version": "1.0",
+    "path": "models\\egfr-20261027T135452Z\\model.json",
+    "sha256": "83c7d9ed16f5c0413091d73c2d74d6b26a4c1cbdbbea22bbed390455edda322a",
+    "size": 2165759
+  },
+  "report": {
+    "schema_version": "1.0",
+    "path": "models\\egfr-20261027T135452Z\\report.json",
+    "sha256": "416c3a40e8654638cce5ebd1edc822ca44222ae72b6ae619ee0d3a23afa38e5e",
+    "size": 1938
+  },
+  "endpoint": "pIC50",
+  "intended_use": "Research-only ranking of in-domain compounds; not efficacy or clinical use",
+  "domain_method": "Training Morgan Tanimoto threshold fixed from train leave-one-out neighbors",
+  "uncertainty_method": "90% split-conformal absolute residual interval on held-out calibration scaffolds",
+  "eligible_for_optimization": true,
+  "limitations": [
+    "Research-only cross-assay EGFR pIC50 prediction; not clinical efficacy or safety",
+    "Scaffold split does not guarantee publication or temporal independence",
+    "Conformal coverage is empirical under scaffold shift; exchangeability is not guaranteed",
+    "Similarity threshold is a heuristic applicability domain",
+    "Single seed and no external prospective validation; not a completed research benchmark"
+  ]
+}

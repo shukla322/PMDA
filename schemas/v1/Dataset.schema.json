@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "Artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size": {
+          "minimum": 0,
+          "title": "Size",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "size"
+      ],
+      "title": "Artifact",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identifier": {
+      "minLength": 1,
+      "title": "Identifier",
+      "type": "string"
+    },
+    "target": {
+      "minLength": 1,
+      "title": "Target",
+      "type": "string"
+    },
+    "artifact": {
+      "$ref": "#/$defs/Artifact"
+    },
+    "source_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Manifest Sha256",
+      "type": "string"
+    },
+    "curation_version": {
+      "minLength": 1,
+      "title": "Curation Version",
+      "type": "string"
+    },
+    "endpoint": {
+      "const": "pIC50",
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "split_policy": {
+      "minLength": 1,
+      "title": "Split Policy",
+      "type": "string"
+    },
+    "license_note": {
+      "minLength": 1,
+      "title": "License Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "identifier",
+    "target",
+    "artifact",
+    "source_manifest_sha256",
+    "curation_version",
+    "endpoint",
+    "split_policy",
+    "license_note"
+  ],
+  "title": "Dataset",
+  "type": "object"
+}

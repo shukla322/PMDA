@@ -1,0 +1,42 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "action": {
+      "enum": [
+        "preview",
+        "hold"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "run_type": {
+      "enum": [
+        "sampling",
+        "staged_learning"
+      ],
+      "title": "Run Type",
+      "type": "string"
+    },
+    "rationale": {
+      "enum": [
+        "Frozen scientific inputs permit configuration preview; launch still requires controller approval.",
+        "Required approval is absent; hold without launching."
+      ],
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "action",
+    "run_type",
+    "rationale"
+  ],
+  "title": "ExecutorProposal",
+  "type": "object"
+}

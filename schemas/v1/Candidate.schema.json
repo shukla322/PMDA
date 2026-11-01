@@ -1,0 +1,81 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identifier": {
+      "minLength": 1,
+      "title": "Identifier",
+      "type": "string"
+    },
+    "input_smiles": {
+      "title": "Input Smiles",
+      "type": "string"
+    },
+    "canonical_smiles": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Canonical Smiles"
+    },
+    "valid": {
+      "title": "Valid",
+      "type": "boolean"
+    },
+    "evidence_level": {
+      "maximum": 3,
+      "minimum": 0,
+      "title": "Evidence Level",
+      "type": "integer"
+    },
+    "rejection_reasons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rejection Reasons",
+      "type": "array"
+    },
+    "activity_status": {
+      "enum": [
+        "unavailable",
+        "qualified",
+        "unqualified",
+        "error"
+      ],
+      "title": "Activity Status",
+      "type": "string"
+    },
+    "predicted_pic50": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predicted Pic50"
+    }
+  },
+  "required": [
+    "identifier",
+    "input_smiles",
+    "canonical_smiles",
+    "valid",
+    "evidence_level",
+    "rejection_reasons",
+    "activity_status"
+  ],
+  "title": "Candidate",
+  "type": "object"
+}

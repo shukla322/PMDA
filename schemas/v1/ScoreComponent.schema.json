@@ -1,0 +1,81 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "name": {
+      "enum": [
+        "QED",
+        "MolecularWeight",
+        "activity"
+      ],
+      "title": "Name",
+      "type": "string"
+    },
+    "weight": {
+      "exclusiveMinimum": 0,
+      "maximum": 100,
+      "title": "Weight",
+      "type": "number"
+    },
+    "direction": {
+      "enum": [
+        "maximize",
+        "minimize",
+        "range"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "predictor_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predictor Id"
+    },
+    "predictor_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predictor Sha256"
+    },
+    "recipe_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recipe Sha256"
+    }
+  },
+  "required": [
+    "name",
+    "weight",
+    "direction"
+  ],
+  "title": "ScoreComponent",
+  "type": "object"
+}

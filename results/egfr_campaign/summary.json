@@ -1,0 +1,33 @@
+{
+  "campaign": "ee978718-7c9b-49ca-b98a-d5d2833e88f6",
+  "workflow_executed": true,
+  "scientific_criteria_met": true,
+  "state": "COMPLETED",
+  "iterations": [
+    {
+      "iteration": 0,
+      "run_type": "sampling",
+      "samples": 48,
+      "portfolio_size": 0,
+      "criteria_met": false,
+      "mean_reward": 0.022922906732537305
+    },
+    {
+      "iteration": 1,
+      "run_type": "staged_learning",
+      "samples": 32,
+      "portfolio_size": 1,
+      "criteria_met": false,
+      "mean_reward": 0.09663620833024172
+    },
+    {
+      "iteration": 2,
+      "run_type": "sampling",
+      "samples": 32,
+      "portfolio_size": 3,
+      "criteria_met": true,
+      "mean_reward": 0.20109985153408563
+    }
+  ],
+  "authorization": "Owner requested implementation and bounded free local demonstration through Stage 7. Automated approval under that delegated development scope; not independent medicinal-chemist signoff."
+}

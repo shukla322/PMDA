@@ -1,0 +1,37 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "complete",
+        "revise",
+        "stop"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "evidence_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Evidence Sha256",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "evidence_sha256",
+    "rationale"
+  ],
+  "title": "AnalysisDecision",
+  "type": "object"
+}

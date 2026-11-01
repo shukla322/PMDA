@@ -1,0 +1,63 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identifier": {
+      "minLength": 1,
+      "title": "Identifier",
+      "type": "string"
+    },
+    "target": {
+      "minLength": 1,
+      "title": "Target",
+      "type": "string"
+    },
+    "confidence": {
+      "const": 9,
+      "title": "Confidence",
+      "type": "integer"
+    },
+    "endpoint": {
+      "const": "IC50",
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "units": {
+      "const": "nM",
+      "title": "Units",
+      "type": "string"
+    },
+    "relation": {
+      "const": "=",
+      "title": "Relation",
+      "type": "string"
+    },
+    "construct_evidence": {
+      "minLength": 1,
+      "title": "Construct Evidence",
+      "type": "string"
+    },
+    "source_document": {
+      "minLength": 1,
+      "title": "Source Document",
+      "type": "string"
+    }
+  },
+  "required": [
+    "identifier",
+    "target",
+    "confidence",
+    "endpoint",
+    "units",
+    "relation",
+    "construct_evidence",
+    "source_document"
+  ],
+  "title": "Assay",
+  "type": "object"
+}

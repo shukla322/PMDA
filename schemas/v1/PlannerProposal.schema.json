@@ -1,0 +1,65 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "action": {
+      "enum": [
+        "propose",
+        "request_information"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "target": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Target"
+    },
+    "predictor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Predictor"
+    },
+    "missing_information": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    },
+    "rationale": {
+      "enum": [
+        "Registered inputs are complete for a bounded research proposal.",
+        "Required registered inputs are missing; hold for clarification."
+      ],
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "action",
+    "target",
+    "predictor",
+    "missing_information",
+    "rationale"
+  ],
+  "title": "PlannerProposal",
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+{
+    "run_type": "sampling",
+    "device": "cpu",
+    "tb_logdir": null,
+    "json_out_config": "C:\\Users\\harsh\\Desktop\\drug design\\BTP\\runtime\\egfr-campaign-20261028T051715Z\\ee978718-7c9b-49ca-b98a-d5d2833e88f6\\outputs\\iteration-2\\executed.json",
+    "seed": 42,
+    "parameters": {
+        "model_file": "C:\\Users\\harsh\\Desktop\\drug design\\BTP\\runtime\\egfr-campaign-20261028T051715Z\\ee978718-7c9b-49ca-b98a-d5d2833e88f6\\inputs\\optimized.prior",
+        "num_smiles": 32,
+        "smiles_file": "C:\\Users\\harsh\\Desktop\\drug design\\BTP\\runtime\\egfr-campaign-20261028T051715Z\\ee978718-7c9b-49ca-b98a-d5d2833e88f6\\inputs\\lead.smi",
+        "target_smiles_path": "",
+        "sample_strategy": "multinomial",
+        "output_file": "C:\\Users\\harsh\\Desktop\\drug design\\BTP\\runtime\\egfr-campaign-20261028T051715Z\\ee978718-7c9b-49ca-b98a-d5d2833e88f6\\outputs\\iteration-2\\samples.csv",
+        "target_nll_file": "target_nll.csv",
+        "unique_molecules": false,
+        "randomize_smiles": true,
+        "isomeric_smiles": false,
+        "temperature": 1.0
+    },
+    "scoring": null,
+    "scheduler": null,
+    "responder": null,
+    "filter": null,
+    "stage": null,
+    "learning_strategy": null,
+    "diversity_filter": null,
+    "intrinsic_penalty": null,
+    "inception": null
+}

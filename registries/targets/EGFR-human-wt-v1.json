@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "identifier": "EGFR-human-wt-v1",
+  "species": "Homo sapiens",
+  "construct_description": "Assay-described wild-type EGFR; CHEMBL203 / P00533",
+  "mechanism": "Inhibition; covalent/noncovalent mechanism not inferred",
+  "endpoint": "pIC50",
+  "limitations": [
+    "Wild-type assignment based on explicit assay descriptions, not manual review of every publication",
+    "IC50 depends on assay conditions; target confidence does not eliminate assay heterogeneity",
+    "Cross-assay medians are a pragmatic research aggregation, not new experimental measurements",
+    "No claim of non-covalent mechanism from activity records alone"
+  ]
+}

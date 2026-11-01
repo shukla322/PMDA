@@ -1,0 +1,338 @@
+{
+  "predictor_sha256": "83c7d9ed16f5c0413091d73c2d74d6b26a4c1cbdbbea22bbed390455edda322a",
+  "strata": {
+    "all": {
+      "n": 171,
+      "metrics": {
+        "mae": 0.5573345305900285,
+        "rmse": 0.7647318623703142,
+        "r2": 0.6431694899611777,
+        "spearman": 0.8293637222237964
+      },
+      "interval_coverage": 0.935672514619883
+    },
+    "in_domain": {
+      "n": 136,
+      "metrics": {
+        "mae": 0.4547217727561583,
+        "rmse": 0.6207523672755509,
+        "r2": 0.7508557449666751,
+        "spearman": 0.8586455063406976
+      },
+      "interval_coverage": 0.9779411764705882
+    },
+    "outside_domain": {
+      "n": 35,
+      "metrics": {
+        "mae": 0.9560583896016374,
+        "rmse": 1.1661656124169357,
+        "r2": -0.4323514788890588,
+        "spearman": 0.6037260179694152
+      },
+      "interval_coverage": 0.7714285714285715
+    },
+    "measured_pic50_le_5": {
+      "n": 5,
+      "metrics": {
+        "mae": 2.175588209243062,
+        "rmse": 2.1916786876040404,
+        "r2": -63.59937719815193,
+        "spearman": -0.19999999999999998
+      },
+      "interval_coverage": 0.0
+    },
+    "measured_pic50_ge_7": {
+      "n": 89,
+      "metrics": {
+        "mae": 0.4892216730790846,
+        "rmse": 0.6902616573752722,
+        "r2": 0.2987332592421531,
+        "spearman": 0.6530964034901043
+      },
+      "interval_coverage": 0.9550561797752809
+    }
+  },
+  "reward_challenges": [
+    {
+      "row": 0,
+      "input_smiles": "invalid",
+      "valid": false,
+      "evidence_level": 0,
+      "activity": {
+        "status": "unavailable",
+        "reason": "No validated predictor registered"
+      },
+      "rejection_reasons": [
+        "invalid_or_empty_smiles"
+      ],
+      "reward": 0.0
+    },
+    {
+      "row": 1,
+      "input_smiles": "",
+      "valid": false,
+      "evidence_level": 0,
+      "activity": {
+        "status": "unavailable",
+        "reason": "No validated predictor registered"
+      },
+      "rejection_reasons": [
+        "invalid_or_empty_smiles"
+      ],
+      "reward": 0.0
+    },
+    {
+      "row": 2,
+      "input_smiles": "CCO",
+      "valid": true,
+      "evidence_level": 1,
+      "activity": {
+        "value": 6.62180084714434,
+        "units": "pIC50",
+        "lower": 5.223503834492179,
+        "upper": 8.0200978597965,
+        "uncertainty_half_width": 1.3982970126521606,
+        "nearest_training_similarity": 0.0851063829787234,
+        "in_domain": false,
+        "status": "unqualified"
+      },
+      "canonical_smiles": "CCO",
+      "duplicate": false,
+      "scaffold": "",
+      "rejection_reasons": [
+        "required_substructure_missing",
+        "outside_predictor_domain"
+      ],
+      "passes_configured_gates": false,
+      "descriptors": {
+        "mw": 46.069,
+        "logp": -0.0014000000000000123,
+        "tpsa": 20.23,
+        "hbd": 1,
+        "hba": 1,
+        "rotatable_bonds": 0,
+        "formal_charge": 0,
+        "qed": 0.4068079656553945,
+        "sa_heuristic": 1.9802570386349831
+      },
+      "novelty": null,
+      "nearest_reference_similarity": null,
+      "alerts": [],
+      "alert_policy": "PAINS and Brenk review flags, not proof of toxicity or automatic rejection",
+      "lipinski_violations": 0,
+      "reward": 0.0
+    },
+    {
+      "row": 3,
+      "input_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "valid": true,
+      "evidence_level": 1,
+      "activity": {
+        "value": 6.601675431644085,
+        "units": "pIC50",
+        "lower": 5.2033784189919245,
+        "upper": 7.999972444296246,
+        "uncertainty_half_width": 1.3982970126521606,
+        "nearest_training_similarity": 0.19148936170212766,
+        "in_domain": false,
+        "status": "unqualified"
+      },
+      "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "duplicate": false,
+      "scaffold": "c1ccccc1",
+      "rejection_reasons": [
+        "required_substructure_missing",
+        "structural_alert_review_required",
+        "outside_predictor_domain"
+      ],
+      "passes_configured_gates": false,
+      "descriptors": {
+        "mw": 180.15899999999996,
+        "logp": 1.3101,
+        "tpsa": 63.60000000000001,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "formal_charge": 0,
+        "qed": 0.5501217966938848,
+        "sa_heuristic": 1.580039750008826
+      },
+      "novelty": null,
+      "nearest_reference_similarity": null,
+      "alerts": [
+        "phenol_ester"
+      ],
+      "alert_policy": "PAINS and Brenk review flags, not proof of toxicity or automatic rejection",
+      "lipinski_violations": 0,
+      "reward": 0.0
+    },
+    {
+      "row": 4,
+      "input_smiles": "[Na+].[Cl-]",
+      "valid": true,
+      "evidence_level": 1,
+      "activity": {
+        "status": "error",
+        "reason": "mixture_or_salt"
+      },
+      "canonical_smiles": "[Cl-].[Na+]",
+      "duplicate": false,
+      "scaffold": "",
+      "rejection_reasons": [
+        "required_substructure_missing",
+        "multifragment_requires_curation",
+        "prediction_failed"
+      ],
+      "passes_configured_gates": false,
+      "descriptors": {
+        "mw": 58.443,
+        "logp": -5.992,
+        "tpsa": 0.0,
+        "hbd": 0,
+        "hba": 0,
+        "rotatable_bonds": 0,
+        "formal_charge": 0,
+        "qed": 0.2433924207514858,
+        "sa_heuristic": 8.485507008507629
+      },
+      "novelty": null,
+      "nearest_reference_similarity": null,
+      "alerts": [],
+      "alert_policy": "PAINS and Brenk review flags, not proof of toxicity or automatic rejection",
+      "lipinski_violations": 0,
+      "reward": 0.0
+    },
+    {
+      "row": 5,
+      "input_smiles": "c1ccccc1",
+      "valid": true,
+      "evidence_level": 1,
+      "activity": {
+        "value": 6.611932576264832,
+        "units": "pIC50",
+        "lower": 5.213635563612671,
+        "upper": 8.010229588916992,
+        "uncertainty_half_width": 1.3982970126521606,
+        "nearest_training_similarity": 0.08333333333333333,
+        "in_domain": false,
+        "status": "unqualified"
+      },
+      "canonical_smiles": "c1ccccc1",
+      "duplicate": false,
+      "scaffold": "c1ccccc1",
+      "rejection_reasons": [
+        "required_substructure_missing",
+        "outside_predictor_domain"
+      ],
+      "passes_configured_gates": false,
+      "descriptors": {
+        "mw": 78.11399999999999,
+        "logp": 1.6866,
+        "tpsa": 0.0,
+        "hbd": 0,
+        "hba": 0,
+        "rotatable_bonds": 0,
+        "formal_charge": 0,
+        "qed": 0.4426283718993647,
+        "sa_heuristic": 1.0
+      },
+      "novelty": null,
+      "nearest_reference_similarity": null,
+      "alerts": [],
+      "alert_policy": "PAINS and Brenk review flags, not proof of toxicity or automatic rejection",
+      "lipinski_violations": 0,
+      "reward": 0.0
+    },
+    {
+      "row": 6,
+      "input_smiles": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "valid": true,
+      "evidence_level": 1,
+      "activity": {
+        "value": 6.667227022871333,
+        "units": "pIC50",
+        "lower": 5.268930010219172,
+        "upper": 8.065524035523493,
+        "uncertainty_half_width": 1.3982970126521606,
+        "nearest_training_similarity": 0.08163265306122448,
+        "in_domain": false,
+        "status": "unqualified"
+      },
+      "canonical_smiles": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "duplicate": false,
+      "scaffold": "",
+      "rejection_reasons": [
+        "molecular_weight_outside_policy",
+        "required_substructure_missing",
+        "structural_alert_review_required",
+        "logp_above_policy",
+        "outside_predictor_domain"
+      ],
+      "passes_configured_gates": false,
+      "descriptors": {
+        "mw": 1124.1759999999983,
+        "logp": 31.454000000000107,
+        "tpsa": 0.0,
+        "hbd": 0,
+        "hba": 0,
+        "rotatable_bonds": 77,
+        "formal_charge": 0,
+        "qed": 0.05326543401654274,
+        "sa_heuristic": 2.181087818517776
+      },
+      "novelty": null,
+      "nearest_reference_similarity": null,
+      "alerts": [
+        "Aliphatic_long_chain"
+      ],
+      "alert_policy": "PAINS and Brenk review flags, not proof of toxicity or automatic rejection",
+      "lipinski_violations": 2,
+      "reward": 0.0
+    },
+    {
+      "row": 7,
+      "input_smiles": "CCOc1cc2ncnc(Nc3ccc(C)cc3)c2c2c1OCCO2",
+      "valid": true,
+      "evidence_level": 3,
+      "activity": {
+        "value": 7.9565407566704325,
+        "units": "pIC50",
+        "lower": 6.558243744018272,
+        "upper": 9.354837769322593,
+        "uncertainty_half_width": 1.3982970126521606,
+        "nearest_training_similarity": 1.0,
+        "in_domain": true,
+        "status": "qualified"
+      },
+      "canonical_smiles": "CCOc1cc2ncnc(Nc3ccc(C)cc3)c2c2c1OCCO2",
+      "duplicate": false,
+      "scaffold": "c1ccc(Nc2ncnc3ccc4c(c23)OCCO4)cc1",
+      "rejection_reasons": [],
+      "passes_configured_gates": true,
+      "descriptors": {
+        "mw": 337.3790000000002,
+        "logp": 3.851720000000002,
+        "tpsa": 65.50000000000001,
+        "hbd": 1,
+        "hba": 6,
+        "rotatable_bonds": 4,
+        "formal_charge": 0,
+        "qed": 0.7799033483574852,
+        "sa_heuristic": 2.484597916893186
+      },
+      "novelty": null,
+      "nearest_reference_similarity": null,
+      "alerts": [],
+      "alert_policy": "PAINS and Brenk review flags, not proof of toxicity or automatic rejection",
+      "lipinski_violations": 0,
+      "reward": 0.519414581339424
+    }
+  ],
+  "limitations": [
+    "Known training lead is a positive pipeline control, not independent validation",
+    "Simple challenge structures are not property-matched decoys",
+    "Only five weak-activity held-out examples; specificity is poorly characterized",
+    "No external reviewer or prospective assay validation",
+    "Generated distribution may invalidate empirical conformal coverage"
+  ]
+}

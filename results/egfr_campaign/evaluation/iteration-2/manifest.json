@@ -1,0 +1,10 @@
+{
+  "evaluation.json": {
+    "sha256": "2a330ce9e99f06a8ec85ce3bf4d9eb4b94c9cb0c0cf399795164cbac91c8bf55",
+    "bytes": 43790
+  },
+  "candidates.parquet": {
+    "sha256": "be230ceeb40640110f3287e4623cd7403c9585a8633e3ab0079d40552dbd73a6",
+    "bytes": 6998
+  }
+}

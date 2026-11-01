@@ -1,0 +1,14 @@
+{
+  "role": "executor",
+  "version": "1.0",
+  "rule": "Copy run_type. Preview only when approved is true, otherwise hold. You cannot launch or approve anything.",
+  "context_fields": [
+    "run_type",
+    "approved",
+    "config_sha256"
+  ],
+  "tools": [],
+  "max_attempts": 2,
+  "max_output_tokens": 384,
+  "authority": "Advisory only; no controller, approvals or subprocess access"
+}
